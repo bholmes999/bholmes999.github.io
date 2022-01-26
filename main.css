@@ -2,3 +2,13 @@ body {
   background: black;
   color: white;
 }
+
+/* #container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+h1, p {
+  text-align: center;
+}

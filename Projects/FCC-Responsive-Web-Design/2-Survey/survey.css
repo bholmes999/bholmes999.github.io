@@ -6,6 +6,7 @@ html, body {
 body {
     font-size: 32px;
     color: #16568f;
+    background-color: yellow;
 }
 
 /* Makes website fit to screen, eliminates box issues from padding */
@@ -41,7 +42,8 @@ h1 {
     max-width: 725px;
     cursor: pointer;
     margin-top: 10px;
-
+    border-right: 50px solid #f9f9f9;
+    border: 2px solid black;
 }
 
 input {

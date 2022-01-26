@@ -1,0 +1,106 @@
+body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #title {
+    margin:auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #img-div {
+    text-align: center;
+    width: 100%;
+    border-radius: 40px;
+    display: inline-block;
+    height: auto;
+    margin: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #picture {
+    justify-self: auto;
+  }
+  
+  img {
+    border: 1px solid black;
+    height: auto;
+    margin: auto;
+    width: 50%;
+    max-width: 500px;
+  }
+  
+  #image-caption {
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+   
+  }
+  
+  #tribute-info {
+    background-color: white;
+    padding: 10px 30px 30px 0px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+  
+  table {
+    background-color: white;
+    
+    margin: 0px 50px;
+    padding: 30px;
+  }
+  
+  tr {
+    background-color: white;
+    
+    list-style: none;
+    padding: 20px;
+  }
+  
+  table tr .year {
+    font-weight: bold;
+    vertical-align: top;
+  }
+  
+  td {
+    padding: 5px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    table {
+      margin: auto;
+    }
+  }
+  
+  
+  #footer {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 15%;
+    padding: 20px 0px 20px 0px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #footer ul {
+    list-style: none;
+    text-align: left;
+  }

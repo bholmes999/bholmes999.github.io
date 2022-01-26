@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="survey.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Television Survey</h1>
+        <p id="description">Please take a moment to tell us about your television viewing habits.  Thank you!</p>
+    </header>
+    <section>
+        <form id="survey-form" action="thank-you.html" method="get">
+            <div class="container">
+
+                <label for="name" id="name-label">Name</label>
+                <input class="text-input" type="text" id="name" name="name" placeholder="Name" required/>
+
+                <label for="email" id="email-label">Email</label>
+                <input class="text-input" type="email" id="email" name="email" placeholder="Email" required/>
+
+                <label for="number" id="number-label">Phone</label>
+                <input class="text-input" type="number" id="number" name="number" placeholder="Phone" min="0000000000" max="9999999999" required/>
+
+                <label for="hours">How many hours of TV do you watch per day, on average?</label>
+                <select name="hours" id="dropdown">
+                    <option disabled selected>Hours</option>
+                    <option value="0-1">0-1</option>
+                    <option value="1-3">1-3</option>
+                    <option value="3+">3+</option>
+                </select>
+
+                <div class="container-2">
+                    <label class="question">What is your main TV provider?</label>
+                    <div class="row">    
+                        <input type="radio" id="antenna" name="provider" value="antenna">
+                        <label for="antenna">Antenna</label>
+                    </div>
+
+                    <div class="row">    
+                        <input type="radio" id="cable" name="provider" value="cable">
+                        <label for="cable">Cable</label>
+                    </div>
+                    <div class="row">    
+                        <input type="radio" id="satellite" name="provider" value="satellite">
+                        <label for="satellite">Satellite</label>
+                    </div>
+                    <div class="row">    
+                        <input type="radio" id="online" name="provider" value="online">
+                        <label for="online">Online Streaming</label>
+                    </div>
+                </div>
+
+                <div class="container-2">
+                    <label class=>What programming do you typically watch?</label>
+                    <div class="row">    
+                        <input type="checkbox" id="action" name="genre" value="action">
+                        <label  for="genre">Action/Adventure</label>
+                    </div>
+                    <div class="row">    
+                        <input type="checkbox" id="comedy" name="genre" value="comedy">
+                        <label  for="genre">Comedy</label>
+                    </div>
+                    <div class="row">    
+                        <input type="checkbox" id="drama" name="genre" value="drama">
+                        <label  for="genre">Drama</label>
+                    </div>
+                    <div class="row">    
+                        <input type="checkbox" id="documentary" name="genre" value="documentary">
+                        <label  for="genre">Documentary</label>
+                    </div>
+                    <div class="row">    
+                        <input type="checkbox" id="history" name="genre" value="history">
+                        <label  for="genre">History</label>
+                    </div>
+                    <div class="row">    
+                        <input type="checkbox" id="news" name="genre" value="news">
+                        <label  for="genre">News</label>
+                    </div>
+                    <div class="row">    
+                        <input type="checkbox" id="sci-fi" name="genre" value="sci-fi">
+                        <label  for="genre">Sci-Fi</label>
+                    </div>
+                    <div class="row">    
+                        <input type="checkbox" id="sports" name="genre" value="sports">
+                        <label  for="genre">Sports</label>
+                    </div>
+                    <div class="row">    
+                        <input type="checkbox" id="thriller" name="genre" value="thriller">
+                        <label  for="genre">Thriller</label>
+                    </div>
+                </div>
+
+                <div class="container-2">
+                    <div class="row">
+                        <label for="comments">Additional Comments</label>
+                    </div>
+                    <div class="row">
+                        <textarea id="comments" name="comments"></textarea>
+                    </div>
+                </div>  
+
+                <div class="container-2">
+                    <input type="submit" id="submit"/>
+                </div>
+            </div>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+

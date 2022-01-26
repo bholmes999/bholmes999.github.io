@@ -1,0 +1,144 @@
+html, body {
+    margin: 0;
+    width: 100%;
+}
+
+body {
+    font-size: 32px;
+    color: #16568f;
+}
+
+/* Makes website fit to screen, eliminates box issues from padding */
+* {
+    box-sizing: border-box;
+  }
+
+h1 {
+    margin-top: 0;
+    font-size: 60px;
+}
+
+#description {
+    margin-bottom: 0;
+}
+
+/* Form Styles */
+
+.text-input, #dropdown, textarea {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.text-input {
+    height: 40px;
+    max-width: 720px;
+}
+
+#dropdown {
+    height: 40px;
+    max-width: 725px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+input {
+    margin: 5px 0 20px 0;
+}
+
+/* Checkbox/Radio Form styles */
+
+.row label {
+    margin-top: 20px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    position: relative;
+    margin: 5px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+/* Layouts */
+
+header, section {
+    padding: 70px;
+    width: 100%;
+}
+
+header {
+    background:	#f8f8ff;
+    text-align: center;
+    margin: 0;
+}
+
+section {
+    background: black;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background:	#f9f9f9;
+    color: #16568f;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    
+}
+
+.container-2 {
+    background:#f9f9f9;
+    width: 100%;
+    padding: 20px 0 0 0;
+}
+
+/* Styling for text area*/
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    padding: 10px;
+}
+
+/* Button Styling */
+
+#submit {
+    background-color: #428bca;
+    color: white;
+    padding: 12px 24px;
+    font-size: 24px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+
+}
+
+#submit:hover {
+    background-color: #5bc0de;
+}
+
+/* Responsive Web Design */
+
+@media only screen and (max-width: 800px) {
+    
+    header {
+        width: 100%;
+    }
+
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+        padding: 0;
+    }
+
+  }

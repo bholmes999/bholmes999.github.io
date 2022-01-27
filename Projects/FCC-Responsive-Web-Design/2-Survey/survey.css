@@ -118,19 +118,21 @@ textarea {
     font-size: 24px;
     border-radius: 10px;
     transition-duration: 0.4s;
-
 }
 
 #submit:hover {
     background-color: #5bc0de;
 }
 
-/* Responsive Web Design */
+/* For mobile devices */
 
-@media only screen and (max-width: 800px) {
+@media only screen 
+/* and (min-device-width : 320px)  */
+and (max-device-width : 576px) {
     
     header {
         width: 100%;
+        padding: 30px 30px 0px 30px;
     }
 
     .container {
@@ -143,4 +145,44 @@ textarea {
         padding: 0;
     }
 
+    /* Shrink font-size to prevent text spillover in form and centering issues in header */
+    body {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .text-input, #dropdown, textarea {
+        padding-left: 4px;
+        padding-right: 4px;
+        font-size: 16px;
+    }
+
+    /* Shrink text input height for new screen-size */
+
+    .text-input {
+        height: 26px;
+    }
+
+    /* Shrink radio and check boxes for new screen-size */
+
+    input[type=radio],
+    input[type=checkbox] {
+    height: 14px;
+    width: 14px;
+}
+
+    /* Shrink dropdown menu for new screen-size */
+
+    #dropdown {
+        height: 30px;
+    }
+
+    /* TODO: Shrink button for new screen-size */
+    #submit {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
   }

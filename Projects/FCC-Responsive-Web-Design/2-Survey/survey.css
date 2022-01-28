@@ -6,7 +6,6 @@ html, body {
 body {
     font-size: 32px;
     color: #16568f;
-    background-color: yellow;
 }
 
 /* Makes website fit to screen, eliminates box issues from padding */
@@ -30,6 +29,7 @@ h1 {
     padding-right: 10px;
     border-radius: 5px;
     font-size: 24px;
+    border: 1px solid black;
 }
 
 .text-input {
@@ -37,13 +37,35 @@ h1 {
     max-width: 720px;
 }
 
+/* Styling for select dropdown */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    color: #428bca;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    top: 21px;
+    right: 12px;
+    position: absolute;
+    pointer-events: none;
+  }
+
 #dropdown {
     height: 40px;
+    width: 100%;
     max-width: 725px;
     cursor: pointer;
     margin-top: 10px;
-    border-right: 50px solid #f9f9f9;
-    border: 2px solid black;
+    background-color: #f9f9f9;
 }
 
 input {
@@ -73,14 +95,23 @@ header, section {
 }
 
 header {
-    background:	#f8f8ff;
+    background:	#f9f9f9;
     text-align: center;
     margin: 0;
 }
 
 section {
-    background: black;
+    /* background: black; */
     margin: 0;
+    background: url(tv.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+form {
+    opacity: 0.8;
 }
 
 .container {
@@ -132,7 +163,7 @@ and (max-device-width : 576px) {
     
     header {
         width: 100%;
-        padding: 30px 30px 0px 30px;
+        padding: 30px 30px 10px 30px;
     }
 
     .container {
@@ -154,19 +185,21 @@ and (max-device-width : 576px) {
         font-size: 40px;
     }
 
+    /* Adjust form sizes and styling for smaller screens */
+
+    .container {
+        padding-top: 26px;
+    }
+
     .text-input, #dropdown, textarea {
         padding-left: 4px;
         padding-right: 4px;
         font-size: 16px;
     }
 
-    /* Shrink text input height for new screen-size */
-
     .text-input {
-        height: 26px;
+        height: 30px;
     }
-
-    /* Shrink radio and check boxes for new screen-size */
 
     input[type=radio],
     input[type=checkbox] {
@@ -174,15 +207,25 @@ and (max-device-width : 576px) {
     width: 14px;
 }
 
-    /* Shrink dropdown menu for new screen-size */
-
     #dropdown {
         height: 30px;
     }
 
-    /* TODO: Shrink button for new screen-size */
+    .select-wrapper::after {
+        font-size: 0.9rem;
+        top: 17px;
+        right: 10px;
+      }
+    
+
     #submit {
         padding: 8px 16px;
         font-size: 16px;
     }
   }
+
+  /* DEBUG: 
+  
+    1) Phone field on desktop has annoying arrows that go up and count numbers
+  
+  */

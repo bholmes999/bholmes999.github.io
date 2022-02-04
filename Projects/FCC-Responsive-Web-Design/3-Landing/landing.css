@@ -1,0 +1,125 @@
+html, body {
+    margin: 0;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+/* Styling for the header */
+
+header {
+    color: #38a37f;
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* height: 100%; */
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-wrap: wrap;
+    /* height: 100px; */
+    width: 100%;
+}
+
+/* .break {
+    flex-basis: 100%;
+    height: 0;
+} */
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: aqua;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    /* visibility: hidden;
+    height: 0; */
+}
+
+.nav-links ul li {
+    flex-basis: 100%;
+    width: 100%;
+    padding-left:0;
+    padding: 10px 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+h1 {
+    font-size: 24px;
+    margin: auto 0px;
+}
+
+#logo {
+    /* height: 130px;
+    min-width: 257px; */
+    height: 50px;
+    width: 50px;
+    margin: auto 10px;
+}
+
+/* TODO: See if a link <a> tag is ok for a burger button. */
+
+/* .brand-logo {
+    flex-basis: 10%;
+}
+
+.brand-name {
+    flex-basis: 10%;
+} */
+
+.burger-wrapper {
+    /* position: absolute;
+    top: 18px;
+    right: 20px; */
+    flex-basis: auto;
+    background-color: lightgreen;
+    text-align: right;
+    margin: 0 0 0 0;
+}
+
+#burger-btn {
+    color: #38a37f;
+    font-size: 32px;
+    text-decoration: none;
+    width: 100%;
+}
+
+#burger-btn:hover {
+    color: blue;
+}
+
+
+/* Styling for main */
+
+main {
+    background-color: bisque;
+    min-width: 100%;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 0;
+}

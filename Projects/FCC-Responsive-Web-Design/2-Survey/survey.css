@@ -122,7 +122,8 @@ form {
     max-width: 720px;
     margin: 0 auto;
     padding: 40px 60px;
-    
+    border-radius: 25px;
+    border-sha
 }
 
 .container-2 {
@@ -226,6 +227,11 @@ and (max-device-width : 576px) {
 
   /* DEBUG: 
   
-    1) Phone field on desktop has annoying arrows that go up and count numbers
+    1)  Phone field on desktop has annoying arrows that go up and count numbers (firefox)
+    2)  Scrolling on mobile device makes background image jump
+    3)  On mobile devices, pushing next on the phone screen jumps to 
+        "Additional Comments" instead of dropdown question.
+    4)  You are able to enter more than 10 digits in the phone form field
+
   
   */

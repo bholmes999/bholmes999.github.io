@@ -4,48 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deduct-It!</title>
-    <link rel="stylesheet" href=
-"https://cdnjs.cloudflare.com/ajax/libs/font
-    -awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="landing.css"/>
 </head>
 <body>
+    
     <header id="header">
         <nav class="navbar">
             <div class="brand-logo">
-                <img class="nav-item" id="logo" src="imgs/logo-7.png"/>
+                <img class="nav-item" id="logo" src="imgs/logo.png"/>
             </div>
             <div class="brand-name">
                 <h1 class="nav-item">Deduct-It!</h1>
+            </div>
+            <div class="sign-up">
+                <button class="action-btn">Sign Up</button>
             </div>  
             <div class="burger-wrapper">
                 <a class="nav-item" id="burger-btn" href="#hamburger-icon">
                     &#9776
                 </a>
             </div>
-            <!-- <div class="break"></div> -->
             <div class="nav-links" id="nav-menu">
                 <ul>
+                    <li><a class="nav-link" href="#">Home</a></li>
                     <li><a class="nav-link" href="#">Features</a></li>
                     <li><a class="nav-link" href="#">About</a></li>
                     <li><a class="nav-link" href="#">Contact</a></li>
                 </ul>
-                    <!-- <div><a class="nav-link" href="#">Features</a></div>
-                    <div><a class="nav-link" href="#">About</a></div>
-                    <div><a class="nav-link" href="#">Contact</a></div> -->
             </div>
         </nav>
     </header>
-    <main>
-        <h2>A simple solution for the self-employed</h2>
-        <p> Tired of endless paper receipts and Excel spreadsheets?  As a sole 
-            proprietor, your time is valuable.  Our software makes expense and income 
-            tracking easy, and eases the headache of tax season.
-        </p>
-        <button>Learn More</button>
-    </main>
+    <section class="container">
+        <article id="main" class="primary">
+            <div class="col">
+                <h2>A simple solution for the self-employed</h2>
+                <p> Your time is valuable.  Our software makes expense and income 
+                    tracking easy, and eases the burden of tax season.
+                </p>
+            </div>
+            <div class="col">
+                <button class="action-btn action-btn-lg">Learn More</button>
+            </div>
+        </article>
+        <article class="secondary">
+            <ion-icon class="features-icon" name="checkmark-done-outline"></ion-icon>
+            <h3>Easy to use, and efficient</h3>
+            <p>
+                Our user-friendly interface makes it easy to start 
+                tracking your business income and expenses today.                
+            </p>
+        </article>
+        <article class="secondary">
+            <ion-icon class="features-icon" name="desktop-outline"></ion-icon>
+            <h3>Integrates easily with tax software</h3>
+            <p>
+                Our software easily transports your data to Intuit 
+                or Turbo-tax software, making tax-season a breeze.
+            </p>
+        </article>
+        <article class="secondary">
+            <ion-icon class="features-icon" name="cloud-outline"></ion-icon>
+            <h3>Peace of mind in the cloud</h3>
+            <p>
+                Sleep easy at night with up to 10 years of cloud storage 
+                for your records to protect you from IRS audits.
+            </p>
+        </article>
+        <article class="primary">
+            
+            <div class="video-wrapper">
+                <!-- <video controls>
+                    <source src="https://www.youtube.com/watch?v=t4yOLAn0yzU" type="video">
+                </video> -->
+                <!-- <h2>Striving for a better tommorrow</h2>
+                <p>Like you, we are strivers and innovators.  Let us help 
+                    with your record-keeping so you can do what's important!
+                </p> -->
+                <iframe id="video" src="https://www.youtube.com/embed/t4yOLAn0yzU" allowfullscreen></iframe>
+            </div>
+        </article>
+        <article class="primary">
+            <h2>Get started today!</h2>
+            <button class="action-btn action-btn-lg">Sign Up</button>         
+        </article>
+    </section>
+
+    <div id="signup-modal-container">
+        <div id="signup-modal">
+            <div class="primary align-left">
+                <!-- <button class="action-btn">Close</button> -->
+                <ion-icon class="action-btn close" name="close-circle-outline"></ion-icon>
+            </div>
+            <div class="secondary desktop-only">
+
+            </div>
+            <div class="secondary align-left">
+                <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+                    <div class="form-row">
+                        <label for="first-name" id="first-name-label">First Name</label>
+                        <input class="text-input" type="text" id="first-name" name="first-name" placeholder="First Name" required/>
+                    </div>
+                    <div class="form-row">
+                        <label for="last-name" id="last-name-label">Last Name</label>
+                        <input class="text-input" type="text" id="last-name" name="last-name" placeholder="Last Name" required/>
+                    </div>
+                    <div class="form-row">
+                        <label for="email" id="email-label">Email</label>
+                        <input class="text-input" type="text" id="email" name="email" placeholder="Email" required/>
+                    </div>
+                    <div class="form-row">
+                        <label for="phone" id="phone-label">Phone</label>
+                        <input class="text-input" type="tel" id="phone" name="phone" placeholder="Phone" required/>
+                    </div>
+                    <div class="form-row">
+                        <label for="password" id="password-label">Password</label>
+                        <input class="text-input" type="password" id="password" name="password" placeholder="Password" required/>
+                    </div>
+                    <div class="form-row">
+                        <label for="confirm-password" id="confirm-password-label">Confirm Password</label>
+                        <input class="text-input" type="password" id="confirm-label" name="confirm-password" placeholder="Confirm Password" required/>
+                    </div>
+                    <div class="form-row">
+                        <input class="action-btn action-btn-lg submit" type="submit" id="submit"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="landing.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
 </body>
 </html>
 
@@ -60,19 +152,9 @@
 -->
 
 
-<!--
+<!-- TODO:
 #5: When I click a .nav-link button in the nav element, I am taken to the 
     corresponding section of the landing page.
-
-#6: I can watch an embedded product video with id="video".
-
-#7: My landing page has a form element with a corresponding id="form".
-
-#8: Within the form, there is an input field with id="email" where I can enter 
-    an email address.
-
-#9: The #email input field should have placeholder text to let the user know 
-    what the field is for.
 
 #10:    The #email input field uses HTML5 validation to confirm that the entered 
         text is an email address.
@@ -86,5 +168,17 @@
 
 #14:    My product landing page should have at least one media query.
 
-#15:    My product landing page should utilize CSS flexbox at least once.
+
+Ideas: 
+    1) e-mail to receive receipts from business expenditures
+        Ex: Joe the plumber buys a new faucet to install from Home Depot.  
+        He then has Home Depot e-mail the receipt to joesplumbing@deduct-it.com, 
+        where it is automatically recorded into his user account.
+
+-->
+
+<!--
+    DEBUG:
+    1)  At 320 px the video overflows and the navbar is crammed
+
 -->

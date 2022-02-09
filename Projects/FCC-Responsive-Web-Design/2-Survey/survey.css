@@ -103,7 +103,7 @@ header {
 section {
     /* background: black; */
     margin: 0;
-    background: url(tv.jpeg) no-repeat center center fixed;
+    background: url("tv.jpeg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -123,7 +123,6 @@ form {
     margin: 0 auto;
     padding: 40px 60px;
     border-radius: 25px;
-    border-sha
 }
 
 .container-2 {
@@ -190,6 +189,7 @@ and (max-device-width : 576px) {
 
     .container {
         padding-top: 26px;
+        border-radius: 0;
     }
 
     .text-input, #dropdown, textarea {

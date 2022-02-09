@@ -1,40 +1,41 @@
 html, body {
-    margin: 0;
     width: 100%;
+    font-style: sans-serif;
+    font-size: 24px;
+    color: #38a37f;
+    background-color: #f7f7f7;
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
 /* Styling for the header */
 
 header {
-    color: #38a37f;
-    background-color: yellow;
+    visibility: visible;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    /* height: 100%; */
+    height: 100%;
     width: 100%;
     margin: 0;
-    padding-bottom: 0;
+    padding-top: 5px;
+    background-color: #f7f7f7;
 }
 
 .navbar {
     display: flex;
     position: relative;
-    /* justify-content: space-between; */
     align-items: center;
     flex-wrap: wrap;
-    /* height: 100px; */
     width: 100%;
 }
-
-/* .break {
-    flex-basis: 100%;
-    height: 0;
-} */
 
 .nav-links {
     display: flex;
@@ -48,13 +49,7 @@ header {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    background-color: aqua;
-    width: 100%;
-    margin: 0;
-    padding-left: 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    background-color: #f7f7f7;
 }
 
 .nav-links ul li {
@@ -62,42 +57,32 @@ header {
     width: 100%;
     padding-left:0;
     padding: 10px 20px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+}
 
+.nav-links ul li a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
 }
 
 h1 {
     font-size: 24px;
-    margin: auto 0px;
+    margin: 0px;
 }
 
 #logo {
-    /* height: 130px;
-    min-width: 257px; */
-    height: 50px;
+    height: 100%;
     width: 50px;
-    margin: auto 10px;
-}
-
-/* TODO: See if a link <a> tag is ok for a burger button. */
-
-/* .brand-logo {
-    flex-basis: 10%;
+    margin: 0 5px;
 }
 
 .brand-name {
-    flex-basis: 10%;
-} */
+    flex-grow: 1;
+}
 
 .burger-wrapper {
-    /* position: absolute;
-    top: 18px;
-    right: 20px; */
-    flex-basis: auto;
-    background-color: lightgreen;
     text-align: right;
-    margin: 0 0 0 0;
+    margin: 0 5px 0 10px;
 }
 
 #burger-btn {
@@ -114,12 +99,145 @@ h1 {
 
 /* Styling for main */
 
-main {
-    background-color: bisque;
+.container {
     min-width: 100%;
     margin: 0;
+}
+
+.primary {
+    text-align: center;
+    padding: 20px;
+}
+
+#main {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("imgs/tax-time.jpeg");
+    background-attachment: fixed; /* No scroll */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+    padding: 50px 25px 0 25px;
+    text-align: center;
+    color: #f7f7f7;
 }
 
 h2 {
     margin-top: 0;
 }
+
+#main p {
+    margin: 30px 0;
+}
+
+#main .action-btn-lg {
+    margin-top: 20px;
+}
+
+/* Styling for features */
+
+.secondary {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+}
+
+.features-icon {
+    font-size: 48px;
+}
+
+.secondary h3 {
+    margin: 10px 0;
+}
+
+/* Styling for video and final CTA */
+
+.video-wrapper {
+    text-align: center;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+/* 
+.primary p, .primary iframe {
+    margin: 10px 0;
+    position: absolute;
+} */
+
+.primary button {
+    margin: 20px 0;
+}
+
+/* Signup button */
+
+.action-btn {
+    padding: 6px 12px;
+    background-color: #38a37f;
+    color: #f7f7f7;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.action-btn-lg {
+    font-size: 32px;
+    margin-left: 0;
+}
+
+/* Styling for modal */
+#signup-modal-container {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f7f7f7;
+}
+
+#signup-modal-container .primary {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#signup-modal-container .secondary {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    margin-top: 5px;
+}
+
+.text-input {
+    width: 100%;
+    margin-top: 5px;
+    padding: 2px 5px;
+    font-size: 24px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.submit {
+    margin-top: 15px;
+    max-width: 130px;
+}
+
+.close {
+    background-color: #f7f7f7;
+    color: #6c757d;
+    font-size: 48px;
+}
+
+.close:hover {
+    color: #292b2c;
+}
+

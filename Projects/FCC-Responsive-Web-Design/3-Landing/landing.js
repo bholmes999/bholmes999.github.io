@@ -13,7 +13,7 @@ burgerButton.addEventListener('click', function(){
         navMenuActive = false
     } else {
         navMenu.style.visibility = 'visible'
-        navMenu.style.height = '100%'
+        navMenu.style.height = '100vh'
         navMenuActive = true
     }
     // alert('burger menu clicked')
@@ -53,26 +53,32 @@ modalButtons.forEach(element => {
         because javascript adds inline styling which overrides
 */
 
+let mobileActive = true
+
 window.addEventListener('resize', function(event) {
     /*  
         Set inline CSS to visible for #nav-menu element when screen is 
         less than mediaQueryCSS
     */
+
     if (document.documentElement.clientWidth >= mediaQueryCSS) {
         navMenu.style.visibility = 'visible'
         navMenu.style.height = '100%'
         navMenuActive = true
-
+        mobileActive = false
     }
 
     /*
         Set boolean navMenuActive to false and make burger menu hidden 
         when screen size is less than mediaQueryCSS   
     */
-
-    if (this.document.documentElement.clientWidth < mediaQueryCSS) {
-        navMenu.style.visibility = 'hidden'
-        navMenu.style.height = '0'
-        navMenuActive = false
-    }
+    
+        if (this.document.documentElement.clientWidth < mediaQueryCSS &&
+            !mobileActive) {
+            navMenu.style.visibility = 'hidden'
+            navMenu.style.height = '0'
+            navMenuActive = false
+            mobileActive = true
+        }
+    
 }, true);

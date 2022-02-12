@@ -12,9 +12,9 @@
 <body>
     
     <header id="header">
-        <nav class="navbar">
+        <nav class="navbar" id="nav-bar">
             <div class="brand-logo">
-                <img class="nav-item" id="logo" src="imgs/logo.png"/>
+                <img class="nav-item" id="header-img" src="imgs/logo.png" alt="logo"/>
             </div>
             <div class="brand-name">
                 <h1 class="nav-item">Deduct-It!</h1>
@@ -30,9 +30,9 @@
             </div>
             <div class="nav-links" id="nav-menu">
                 <ul>
-                    <li><a class="nav-link" href="#">Home</a></li>
-                    <li><a class="nav-link" href="#">Features</a></li>
-                    <li><a class="nav-link" href="#">About</a></li>
+                    <li><a class="nav-link" href="#main">Home</a></li>
+                    <li><a class="nav-link" href="#features">Features</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
                     <!-- <li><a class="nav-link" href="#">Contact</a></li> -->
                 </ul>
             </div>
@@ -41,8 +41,8 @@
             </div>
         </nav>
     </header>
-    <section class="container">
-        <article id="main" class="primary">
+    <div class="container">
+        <div id="main" class="primary">
             <div class="col">
                 <h2>A simple solution for the self-employed</h2>
                 <p> Your time is valuable.  Our software makes expense and income 
@@ -52,8 +52,8 @@
             <div class="col">
                 <button class="action-btn action-btn-lg">Learn More</button>
             </div>
-        </article>
-        <article class="secondary">
+        </div>
+        <div class="secondary" id="features">
             <div class="col">
                 <ion-icon class="features-icon" name="checkmark-done-outline"></ion-icon>
                 <h3>Easy to use, and efficient</h3>
@@ -80,25 +80,21 @@
                     for your records to protect you from IRS audits.
                 </p>
             </div>
-        </article>
-        <article class="primary">
+        </div>
+        <div class="primary" id="about">
             
             <div class="video-wrapper">
                 <!-- <video controls>
                     <source src="https://www.youtube.com/watch?v=t4yOLAn0yzU" type="video">
                 </video> -->
-                <!-- <h2>Striving for a better tommorrow</h2>
-                <p>Like you, we are strivers and innovators.  Let us help 
-                    with your record-keeping so you can do what's important!
-                </p> -->
                 <iframe id="video" src="https://www.youtube.com/embed/t4yOLAn0yzU" allowfullscreen></iframe>
             </div>
-        </article>
-        <article class="primary">
+        </div>
+        <div class="primary">
             <h2>Get started today!</h2>
             <button class="action-btn action-btn-lg">Sign Up</button>         
-        </article>
-    </section>
+        </div>
+    </div>
 
     <div id="signup-modal-container">
         <div id="signup-modal">
@@ -121,7 +117,7 @@
                     </div>
                     <div class="form-row">
                         <label for="email" id="email-label">Email</label>
-                        <input class="text-input" type="text" id="email" name="email" placeholder="Email" required/>
+                        <input class="text-input" type="email" id="email" name="email" placeholder="Email" required/>
                     </div>
                     <div class="form-row">
                         <label for="phone" id="phone-label">Phone</label>
@@ -133,7 +129,7 @@
                     </div>
                     <div class="form-row">
                         <label for="confirm-password" id="confirm-password-label">Confirm Password</label>
-                        <input class="text-input" type="password" id="confirm-label" name="confirm-password" placeholder="Confirm Password" required/>
+                        <input class="text-input" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required/>
                     </div>
                     <div class="form-row">
                         <input class="action-btn action-btn-lg submit" type="submit" id="submit"/>
@@ -146,46 +142,10 @@
     <script src="landing.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </body>
 </html>
-
-<!--
-    TODO:
-    Webpage format:
-        -   Navbar at top stays there and links to different sections of the 
-            landing page
-        -   Product video on webpage (About links to video?)
-        -   Form to submit email to contact company
-
--->
-
-
-<!-- TODO:
-#5: When I click a .nav-link button in the nav element, I am taken to the 
-    corresponding section of the landing page.
-
-#10:    The #email input field uses HTML5 validation to confirm that the entered 
-        text is an email address.
-
-#11:    Within the form, there is a submit input with a corresponding id="submit".
-
-#12:    When I click the #submit element, the email is submitted to a static 
-        page (use this mock URL: https://www.freecodecamp.com/email-submit).
-
-#13:    The navbar should always be at the top of the viewport.
-
-#14:    My product landing page should have at least one media query.
-
-
-Ideas: 
-    1) e-mail to receive receipts from business expenditures
-        Ex: Joe the plumber buys a new faucet to install from Home Depot.  
-        He then has Home Depot e-mail the receipt to joesplumbing@deduct-it.com, 
-        where it is automatically recorded into his user account.
-
--->
 
 <!--
     DEBUG:
@@ -194,7 +154,7 @@ Ideas:
         are not centered correctly
     -   Modal on mobile you can see background when you scroll down fast.
     -   Sometimes you cannot scroll on mobile too?
-    -   When you click on the burger menu on/off it triggers the #nav-menu 
+    -   FIXED: When you click on the burger menu on/off it triggers the #nav-menu 
         element to be set to hidden and the boolean navMenuActive is false
 
 

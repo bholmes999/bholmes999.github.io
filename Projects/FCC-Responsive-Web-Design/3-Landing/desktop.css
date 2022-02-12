@@ -2,6 +2,7 @@
 
 @media only screen and (min-width : 620px) {
 
+/* Navbar signup buttons styling */
     .sign-up-mobile {
         visibility: hidden;
         width: 0;
@@ -15,6 +16,8 @@
         display: flex;
         align-items: center;
     }
+
+/* Styling for the navbar */
 
     header {
         flex-wrap: no-wrap;
@@ -59,5 +62,58 @@
     .burger-wrapper {
         visibility: hidden;
         width: 0;
+    }
+
+    #navbar-btn-desktop {
+        margin-right: 10px;
+    }
+
+/* Styling for main */
+
+/* #main {
+    display: flex;
+    padding: 150px;
+    align-items: center;
+} */
+
+    #main {
+        padding: 100px;
+    }
+
+    #main .col {
+        /* flex-basis: 50%; */
+        max-width: 50%;
+        margin: 0 auto;
+        max-width: 570px;
+    }
+
+    /* Styling for features */
+    .secondary {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .secondary col {
+        max-width: 50%;
+        flex-basis: 50%;
+    }
+
+
+
+}
+
+
+
+@media only screen and (min-width : 910px) {
+
+    /* Styling for features */
+    .secondary {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .secondary col {
+        max-width: 200px;
+        flex-basis: 50%;
     }
 }

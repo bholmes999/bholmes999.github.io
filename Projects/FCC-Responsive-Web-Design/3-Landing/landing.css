@@ -14,6 +14,16 @@ html, body {
 
 /* Styling for the header */
 
+.brand-logo, 
+.brand-name, 
+.sign-up-mobile, 
+.burger-wrapper, 
+.nav-links, 
+.sign-up-desktop {
+    display: flex;
+    align-items: center;
+}
+
 header {
     visibility: visible;
     position: sticky;
@@ -25,7 +35,8 @@ header {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding-top: 5px;
+    padding: 0;
+    /* padding-top: 5px; */
     background-color: #f7f7f7;
 }
 
@@ -33,8 +44,10 @@ header {
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    /* position: relative; */
 }
 
 .nav-links {
@@ -50,6 +63,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: #f7f7f7;
+    width: 100%;
 }
 
 .nav-links ul li {
@@ -71,29 +85,44 @@ h1 {
 }
 
 #logo {
-    height: 100%;
+    /* height: 100%; */
+    height: 50px;
     width: 50px;
-    margin: 0 5px;
+    margin: 0 5px 0 0;
 }
 
 .brand-name {
     flex-grow: 1;
+    /* display: flex;
+    align-items: center; */
 }
 
 .burger-wrapper {
     text-align: right;
-    margin: 0 5px 0 10px;
+    margin: 0 0 0 5px;
+    /* background-color: peru; */
 }
 
 #burger-btn {
-    color: #38a37f;
+    font-size: 48px;
+    font-weight: bold;
+    /* color: #38a37f;
     font-size: 32px;
     text-decoration: none;
-    width: 100%;
+    width: 100%; */
 }
 
 #burger-btn:hover {
     color: blue;
+}
+
+/* Sign-up buttons in navbar */
+
+.sign-up-desktop {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    display: none;
 }
 
 
@@ -117,7 +146,6 @@ h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 70vh;
     padding: 50px 25px 0 25px;
     text-align: center;
     color: #f7f7f7;
@@ -137,7 +165,7 @@ h2 {
 
 /* Styling for features */
 
-.secondary {
+.secondary .col {
     text-align: center;
     padding: 20px;
     color: #6c757d;
@@ -155,10 +183,15 @@ h2 {
 
 .video-wrapper {
     text-align: center;
-    width: 100%;
+    /* width: 100%;
     height: 0;
     padding-bottom: 56.25%;
-    position: relative;
+    position: relative; */
+}
+
+#video {
+    /* TODO: Video overflows from video-wrapper */
+    max-width: 100%;
 }
 /* 
 .primary p, .primary iframe {
@@ -180,6 +213,7 @@ h2 {
     font-weight: inherit;
     font-size: 20px;
     border-radius: 10px;
+    /* text-transform: uppercase; */
 }
 
 .action-btn-lg {
@@ -187,14 +221,18 @@ h2 {
     margin-left: 0;
 }
 
+
+
 /* Styling for modal */
 #signup-modal-container {
     visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
+    height: 100%;
+    width: 100%;
     background-color: #f7f7f7;
 }
 
@@ -240,4 +278,3 @@ h2 {
 .close:hover {
     color: #292b2c;
 }
-

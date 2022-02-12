@@ -6,6 +6,8 @@
     <title>Deduct-It!</title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="landing.css"/>
+    <link rel="stylesheet" href="desktop.css"/>
+
 </head>
 <body>
     
@@ -17,21 +19,25 @@
             <div class="brand-name">
                 <h1 class="nav-item">Deduct-It!</h1>
             </div>
-            <div class="sign-up">
-                <button class="action-btn">Sign Up</button>
+            <div class="sign-up-mobile">
+                <button id="navbar-btn-mobile" class="action-btn">Sign Up</button>
             </div>  
             <div class="burger-wrapper">
-                <a class="nav-item" id="burger-btn" href="#hamburger-icon">
+                <!-- <a class="nav-item" id="burger-btn" href="#hamburger-icon">
                     &#9776
-                </a>
+                </a> -->
+                <ion-icon id="burger-btn" name="menu-outline"></ion-icon>
             </div>
             <div class="nav-links" id="nav-menu">
                 <ul>
                     <li><a class="nav-link" href="#">Home</a></li>
                     <li><a class="nav-link" href="#">Features</a></li>
                     <li><a class="nav-link" href="#">About</a></li>
-                    <li><a class="nav-link" href="#">Contact</a></li>
+                    <!-- <li><a class="nav-link" href="#">Contact</a></li> -->
                 </ul>
+            </div>
+            <div class="sign-up-desktop">
+                <button id="navbar-btn-desktop" class="action-btn">Sign Up</button>
             </div>
         </nav>
     </header>
@@ -48,28 +54,32 @@
             </div>
         </article>
         <article class="secondary">
-            <ion-icon class="features-icon" name="checkmark-done-outline"></ion-icon>
-            <h3>Easy to use, and efficient</h3>
-            <p>
-                Our user-friendly interface makes it easy to start 
-                tracking your business income and expenses today.                
-            </p>
-        </article>
-        <article class="secondary">
-            <ion-icon class="features-icon" name="desktop-outline"></ion-icon>
-            <h3>Integrates easily with tax software</h3>
-            <p>
-                Our software easily transports your data to Intuit 
-                or Turbo-tax software, making tax-season a breeze.
-            </p>
-        </article>
-        <article class="secondary">
-            <ion-icon class="features-icon" name="cloud-outline"></ion-icon>
-            <h3>Peace of mind in the cloud</h3>
-            <p>
-                Sleep easy at night with up to 10 years of cloud storage 
-                for your records to protect you from IRS audits.
-            </p>
+            <div class="col">
+                <ion-icon class="features-icon" name="checkmark-done-outline"></ion-icon>
+                <h3>Easy to use, and efficient</h3>
+                <p>
+                    Our user-friendly interface makes it easy to start 
+                    tracking your business income and expenses today.                
+                </p>
+            </div>
+            
+            <div class="col">
+                <ion-icon class="features-icon" name="desktop-outline"></ion-icon>
+                <h3>Integrates easily with tax software</h3>
+                <p>
+                    Our software easily transports your data to Intuit 
+                    or Turbo-tax software, making tax-season a breeze.
+                </p>
+            </div>
+            
+            <div class="col">
+                <ion-icon class="features-icon" name="cloud-outline"></ion-icon>
+                <h3>Peace of mind in the cloud</h3>
+                <p>
+                    Sleep easy at night with up to 10 years of cloud storage 
+                    for your records to protect you from IRS audits.
+                </p>
+            </div>
         </article>
         <article class="primary">
             
@@ -179,6 +189,13 @@ Ideas:
 
 <!--
     DEBUG:
-    1)  At 320 px the video overflows and the navbar is crammed
+    
+    -   FIXED: (Except for burger icon) Navbar image has padding on the bottom and elements in the navbar 
+        are not centered correctly
+    -   Modal on mobile you can see background when you scroll down fast.
+    -   Sometimes you cannot scroll on mobile too?
+    -   When you click on the burger menu on/off it triggers the #nav-menu 
+        element to be set to hidden and the boolean navMenuActive is false
+
 
 -->

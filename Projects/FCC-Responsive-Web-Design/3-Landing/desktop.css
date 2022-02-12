@@ -1,0 +1,63 @@
+/* Desktop version */
+
+@media only screen and (min-width : 620px) {
+
+    .sign-up-mobile {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .sign-up-desktop {
+        visibility: visible;
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    header {
+        flex-wrap: no-wrap;
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+    
+    .navbar {
+        display: flex;
+        align-items: center;
+        flex-wrap: no-wrap;
+    }
+
+    .brand-name {
+        flex-basis: auto;
+    }
+
+    #nav-menu {
+        visibility: visible;
+        height: 100%;
+        display: flex;
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        visibility: visible;
+        height: 100%;
+        flex-basis: auto;
+        align-items: center;
+    }
+    
+    .nav-links ul {
+        flex-direction: row;
+    }
+    
+    .nav-links ul li {
+        font-weight: bold;
+        flex-basis: auto;
+    }
+
+    .burger-wrapper {
+        visibility: hidden;
+        width: 0;
+    }
+}

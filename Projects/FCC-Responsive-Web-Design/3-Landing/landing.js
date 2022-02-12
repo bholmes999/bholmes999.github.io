@@ -1,3 +1,5 @@
+const mediaQueryCSS = 620
+
 /* Burger button menu dropdown */
 
 let burgerButton = document.getElementById('burger-btn')
@@ -11,9 +13,10 @@ burgerButton.addEventListener('click', function(){
         navMenuActive = false
     } else {
         navMenu.style.visibility = 'visible'
-        navMenu.style.height = '100vh'
+        navMenu.style.height = '100%'
         navMenuActive = true
     }
+    // alert('burger menu clicked')
 })
 
 /* Modal form sign-up */
@@ -41,3 +44,35 @@ modalButtons.forEach(element => {
     })    
 });
 
+/* Bug Fix:
+        The #nav-menu element is hidden after you click the burger 
+        menu on and off again.  Boolean navMenuActive is set to false. 
+        Boolean navMenuActive should stay false upon resize, but the 
+        #nav-menu element should be visible on resized larger screen.
+        The reason I cannot change the values via CSS Media Query is 
+        because javascript adds inline styling which overrides
+*/
+
+window.addEventListener('resize', function(event) {
+    /*  
+        Set inline CSS to visible for #nav-menu element when screen is 
+        less than mediaQueryCSS
+    */
+    if (document.documentElement.clientWidth >= mediaQueryCSS) {
+        navMenu.style.visibility = 'visible'
+        navMenu.style.height = '100%'
+        navMenuActive = true
+
+    }
+
+    /*
+        Set boolean navMenuActive to false and make burger menu hidden 
+        when screen size is less than mediaQueryCSS   
+    */
+
+    if (this.document.documentElement.clientWidth < mediaQueryCSS) {
+        navMenu.style.visibility = 'hidden'
+        navMenu.style.height = '0'
+        navMenuActive = false
+    }
+}, true);

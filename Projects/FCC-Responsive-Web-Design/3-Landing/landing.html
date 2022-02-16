@@ -6,7 +6,7 @@
     <title>Deduct-It!</title>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="landing.css"/>
-    <link rel="stylesheet" href="desktop.css"/>
+    <!-- <link rel="stylesheet" href="desktop.css"/> -->
 
 </head>
 <body>
@@ -19,8 +19,8 @@
             <div class="brand-name">
                 <h1 class="nav-item">Deduct-It!</h1>
             </div>
-            <div class="sign-up-mobile">
-                <button id="navbar-btn-mobile" class="action-btn">Sign Up</button>
+            <div class="sign-up-mobile" id="mobile-signup">
+                <button id="navbar-btn-mobile" class="action-btn open transition">Sign Up</button>
             </div>  
             <div class="burger-wrapper">
                 <!-- <a class="nav-item" id="burger-btn" href="#hamburger-icon">
@@ -36,8 +36,8 @@
                     <!-- <li><a class="nav-link" href="#">Contact</a></li> -->
                 </ul>
             </div>
-            <div class="sign-up-desktop">
-                <button id="navbar-btn-desktop" class="action-btn">Sign Up</button>
+            <div class="sign-up-desktop" id="desktop-signup">
+                <button id="navbar-btn-desktop" class="action-btn open transition">Sign Up</button>
             </div>
         </nav>
     </header>
@@ -50,7 +50,7 @@
                 </p>
             </div>
             <div class="col">
-                <button class="action-btn action-btn-lg">Learn More</button>
+                <button class="action-btn action-btn-lg open">Learn More</button>
             </div>
         </div>
         <div class="secondary" id="features">
@@ -81,9 +81,9 @@
                 </p>
             </div>
         </div>
-        <div class="primary" id="about">
+        <div class="primary">
             
-            <div class="video-wrapper">
+            <div class="video-wrapper" id="about">
                 <!-- <video controls>
                     <source src="https://www.youtube.com/watch?v=t4yOLAn0yzU" type="video">
                 </video> -->
@@ -92,15 +92,16 @@
         </div>
         <div class="primary">
             <h2>Get started today!</h2>
-            <button class="action-btn action-btn-lg">Sign Up</button>         
+            <button class="action-btn action-btn-lg open">Sign Up</button>         
         </div>
     </div>
 
-    <div id="signup-modal-container">
+    <div id="signup-modal-container" class="hidden">
         <div id="signup-modal">
             <div class="primary align-left">
                 <!-- <button class="action-btn">Close</button> -->
-                <ion-icon class="action-btn close" name="close-circle-outline"></ion-icon>
+                    <ion-icon class="action-btn close" name="close-circle-outline"></ion-icon>
+                
             </div>
             <div class="secondary desktop-only">
 
@@ -142,7 +143,7 @@
     <script src="landing.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 
 </body>
 </html>
@@ -154,8 +155,7 @@
         are not centered correctly
     -   Modal on mobile you can see background when you scroll down fast.
     -   Sometimes you cannot scroll on mobile too?
+    -   #about link does not work, goes to features?
     -   FIXED: When you click on the burger menu on/off it triggers the #nav-menu 
         element to be set to hidden and the boolean navMenuActive is false
-
-
 -->

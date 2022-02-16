@@ -1,84 +1,107 @@
-const mediaQueryCSS = 620
+const mediaQueryDesktop = window.matchMedia('(min-width: 620px)')
+const mediaQueryMobile = window.matchMedia('(max-width: 619px)')
 
-/* Burger button menu dropdown */
+let mobileActive = true
+let navMenuActive = false
+let modalActive = false
+let init = true
 
 let burgerButton = document.getElementById('burger-btn')
 let navMenu = document.getElementById('nav-menu')
-let navMenuActive = false
+let navLinks = document.querySelectorAll('.nav-link')
+let mobileSignupDiv = document.getElementById('mobile-signup')
+let desktopSignupDiv = document.getElementById('desktop-signup')
+let mobileActionButton = document.getElementById('navbar-btn-mobile')
+let desktopActionButton = document.getElementById('navbar-btn-desktop')
 
-burgerButton.addEventListener('click', function(){
-    if(navMenuActive) {
-        navMenu.style.visibility = 'hidden'
-        navMenu.style.height = '0'
-        navMenuActive = false
-    } else {
-        navMenu.style.visibility = 'visible'
-        navMenu.style.height = '100vh'
-        navMenuActive = true
+let header = document.getElementById('header')
+let openModalButtons = document.querySelectorAll('.open')
+let closeModalButtons = document.querySelectorAll('.close')
+let modalDiv = document.getElementById('signup-modal-container')
+
+
+
+
+function toggleBurgerMenu() {
+   
+    navMenu.classList.toggle('transition')
+    navMenu.classList.toggle('hidden')
+    navMenu.classList.toggle('full-height')
+    navMenu.classList.toggle('flex-display')
+       
+    navMenuActive = !navMenuActive
+}
+
+
+
+function smallToLargeScreen(e) {
+    if (e.matches) {      
+
+        if (navMenuActive) {
+            console.log('nav menu is active moving from small to large')
+            toggleBurgerMenu()
+        }
+
+        navMenu.classList.remove('hidden')
+        mobileActive = false
     }
-    // alert('burger menu clicked')
+  }
+   
+  // Register event listener
+  mediaQueryDesktop.addListener(smallToLargeScreen)
+  
+  // Initial check
+  smallToLargeScreen(mediaQueryDesktop)
+
+function largeToSmallScreen(e) {
+
+    if (e.matches) {
+        navMenu.classList.toggle('hidden')
+        mobileActive = true
+    }
+}
+
+mediaQueryMobile.addListener(largeToSmallScreen)
+largeToSmallScreen(mediaQueryMobile)
+
+
+init = false
+
+
+/* Burger button menu dropdown */
+
+burgerButton.addEventListener('click', function(){   
+    toggleBurgerMenu()
+})
+
+/* Make mobile nav-menu disappear when link is clicked */
+
+navLinks.forEach(element => {
+    element.addEventListener('click', function(){
+        if (mobileActive) {
+            toggleBurgerMenu()
+        }
+    })
 })
 
 /* Modal form sign-up */
 
-let header = document.getElementById('header')
-let modalButtons = document.querySelectorAll('.action-btn')
-let modalDiv = document.getElementById('signup-modal-container')
-let modalActive = false
-
-
-modalButtons.forEach(element => {
+openModalButtons.forEach(element => {
     element.addEventListener('click', function(){
-        if(modalActive) {
-            modalDiv.style.visibility = 'hidden'
-            modalDiv.style.height = '0'
-            header.style.visibility = 'visible'
-            modalActive = false
 
-        } else {
-            modalDiv.style.visibility = 'visible'
+        modalDiv.classList.remove('hidden')
             modalDiv.style.height = '100%'
-            header.style.visibility = 'hidden'
+            header.classList.add('hidden')
             modalActive = true
-        }
+
     })    
 });
 
-/* Bug Fix:
-        The #nav-menu element is hidden after you click the burger 
-        menu on and off again.  Boolean navMenuActive is set to false. 
-        Boolean navMenuActive should stay false upon resize, but the 
-        #nav-menu element should be visible on resized larger screen.
-        The reason I cannot change the values via CSS Media Query is 
-        because javascript adds inline styling which overrides
-*/
-
-let mobileActive = true
-
-window.addEventListener('resize', function(event) {
-    /*  
-        Set inline CSS to visible for #nav-menu element when screen is 
-        less than mediaQueryCSS
-    */
-
-    if (document.documentElement.clientWidth >= mediaQueryCSS) {
-        navMenu.style.visibility = 'visible'
-        navMenu.style.height = '100%'
-        navMenuActive = true
-        mobileActive = false
-    }
-
-    /*
-        Set boolean navMenuActive to false and make burger menu hidden 
-        when screen size is less than mediaQueryCSS   
-    */
-    
-        if (this.document.documentElement.clientWidth < mediaQueryCSS &&
-            !mobileActive) {
-            navMenu.style.visibility = 'hidden'
-            navMenu.style.height = '0'
-            navMenuActive = false
-            mobileActive = true
-        }
-    
-}, true);
+closeModalButtons.forEach(element => {
+    element.addEventListener('click', function(){
+        modalDiv.classList.add('hidden')
+            header.classList.remove('hidden')
+            // navMenu.removeAttribute('style')
+            modalActive = false
+    })
+})

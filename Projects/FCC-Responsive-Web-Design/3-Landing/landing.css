@@ -12,6 +12,38 @@ html, body {
     padding: 0;
   }
 
+/* Classes for JS */
+
+.hidden {
+    visibility: hidden;
+    height: 0px;
+    display: none;
+}
+
+.flex-display {
+    display: flex;
+}
+
+.visible {
+    visibility: visible;
+    height: 100%;
+}
+
+.transition {
+    transition: 1s;
+    /* -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden; */
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.no-height {
+    height: 0px;
+}
+
+
 /* Styling for the header */
 
 .brand-logo, 
@@ -47,15 +79,14 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    /* position: relative; */
 }
 
 .nav-links {
-    display: flex;
+    /* display: none; */
     flex-direction: column;
     flex-basis: 100%;
-    visibility: hidden;
     height: 0;
+    font-weight:  bold;
 }
 
 .nav-links ul {
@@ -77,12 +108,12 @@ header {
     text-decoration: none;
     font: inherit;
     color: inherit;
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 .nav-links ul li a:hover {
     color: #006400;
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 h1 {
@@ -129,6 +160,10 @@ h1 {
     height: 0;
     width: 0;
     display: none;
+}
+
+.sign-up-mobile {
+    visibility: visible;
 }
 
 
@@ -221,13 +256,13 @@ h2 {
     font-weight: inherit;
     font-size: 20px;
     border-radius: 10px;
-    transition: 0.3s;
+    /* transition: 0.3s; */
     /* text-transform: uppercase; */
 }
 
 .action-btn:hover {
     background-color: #006400;
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 .action-btn-lg {
@@ -239,7 +274,7 @@ h2 {
 
 /* Styling for modal */
 #signup-modal-container {
-    visibility: hidden;
+    /* visibility: hidden; */
     position: fixed;
     top: 0;
     left: 0;
@@ -291,4 +326,127 @@ h2 {
 
 .close:hover {
     color: #292b2c;
+    background-color: #f7f7f7;
+    /* transition: 0.3s; */
 }
+
+/* Desktop version */
+
+@media only screen and (min-width : 620px) {
+
+    /* Navbar signup buttons styling */
+        .sign-up-mobile {
+            display: none;
+            visibility: hidden;
+            width: 0;
+            height: 0;
+        }
+    
+        .sign-up-desktop {
+            visibility: visible;
+            width: auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    
+    /* Styling for the navbar */
+    
+        header {
+            flex-wrap: no-wrap;
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            flex-wrap: no-wrap;
+        }
+    
+        .brand-name {
+            flex-basis: auto;
+        }
+    
+        #nav-menu {
+            /* visibility: visible; */
+            height: 100%;
+            display: flex;
+        }
+        
+        .nav-links {
+            flex-direction: row;
+            /* visibility: visible; */
+            height: 100%;
+            flex-basis: auto;
+            align-items: center;
+        }
+        
+        .nav-links ul {
+            flex-direction: row;
+        }
+        
+        .nav-links ul li {
+            font-weight: bold;
+            flex-basis: auto;
+        }
+    
+        .burger-wrapper {
+            visibility: hidden;
+            width: 0;
+        }
+    
+        #navbar-btn-desktop {
+            margin-right: 10px;
+        }
+    
+    /* Styling for main */
+    
+    /* #main {
+        display: flex;
+        padding: 150px;
+        align-items: center;
+    } */
+    
+        #main {
+            padding: 100px;
+        }
+    
+        #main .col {
+            /* flex-basis: 50%; */
+            max-width: 50%;
+            margin: 0 auto;
+            max-width: 570px;
+        }
+    
+        /* Styling for features */
+        .secondary {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .secondary col {
+            max-width: 50%;
+            flex-basis: 50%;
+        }
+    
+    
+    
+    }
+    
+    
+    
+    @media only screen and (min-width : 910px) {
+    
+        /* Styling for features */
+        .secondary {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    
+        .secondary col {
+            max-width: 200px;
+            flex-basis: 50%;
+        }
+    }

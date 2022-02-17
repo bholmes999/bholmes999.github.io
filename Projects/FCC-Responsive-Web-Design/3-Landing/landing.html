@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deduct-It!</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="landing.css"/>
-    <!-- <link rel="stylesheet" href="desktop.css"/> -->
-
 </head>
 <body>
     
@@ -23,9 +20,6 @@
                 <button id="navbar-btn-mobile" class="action-btn open transition">Sign Up</button>
             </div>  
             <div class="burger-wrapper">
-                <!-- <a class="nav-item" id="burger-btn" href="#hamburger-icon">
-                    &#9776
-                </a> -->
                 <ion-icon id="burger-btn" name="menu-outline"></ion-icon>
             </div>
             <div class="nav-links" id="nav-menu">
@@ -33,7 +27,6 @@
                     <li><a class="nav-link" href="#main">Home</a></li>
                     <li><a class="nav-link" href="#features">Features</a></li>
                     <li><a class="nav-link" href="#about">About</a></li>
-                    <!-- <li><a class="nav-link" href="#">Contact</a></li> -->
                 </ul>
             </div>
             <div class="sign-up-desktop" id="desktop-signup">
@@ -84,9 +77,6 @@
         <div class="primary">
             
             <div class="video-wrapper" id="about">
-                <!-- <video controls>
-                    <source src="https://www.youtube.com/watch?v=t4yOLAn0yzU" type="video">
-                </video> -->
                 <iframe id="video" src="https://www.youtube.com/embed/t4yOLAn0yzU" allowfullscreen></iframe>
             </div>
         </div>
@@ -98,15 +88,15 @@
 
     <div id="signup-modal-container" class="hidden">
         <div id="signup-modal">
-            <div class="primary align-left">
-                <!-- <button class="action-btn">Close</button> -->
-                    <ion-icon class="action-btn close" name="close-circle-outline"></ion-icon>
-                
+            <div class="modal-header align-left">
+                <div class="col close-wrapper">
+                    <ion-icon class="action-btn close" name="close-circle-outline"></ion-icon>      
+                </div>
+                <div class="col">
+                    <em>Sign up now and start tracking your expenses today!</em>
+                </div>
             </div>
-            <div class="secondary desktop-only">
-
-            </div>
-            <div class="secondary align-left">
+            <div class="centered align-left">
                 <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
                     <div class="form-row">
                         <label for="first-name" id="first-name-label">First Name</label>
@@ -147,15 +137,3 @@
 
 </body>
 </html>
-
-<!--
-    DEBUG:
-    
-    -   FIXED: (Except for burger icon) Navbar image has padding on the bottom and elements in the navbar 
-        are not centered correctly
-    -   Modal on mobile you can see background when you scroll down fast.
-    -   Sometimes you cannot scroll on mobile too?
-    -   #about link does not work, goes to features?
-    -   FIXED: When you click on the burger menu on/off it triggers the #nav-menu 
-        element to be set to hidden and the boolean navMenuActive is false
--->

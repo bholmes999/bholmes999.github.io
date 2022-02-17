@@ -31,8 +31,6 @@ html, body {
 
 .transition {
     transition: 1s;
-    /* -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden; */
 }
 
 .full-height {
@@ -57,18 +55,13 @@ html, body {
 }
 
 header {
-    visibility: visible;
+    /* visibility: visible; */
     position: sticky;
     top: 0;
     z-index: 100;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    /* padding-top: 5px; */
     background-color: #f7f7f7;
 }
 
@@ -108,12 +101,10 @@ header {
     text-decoration: none;
     font: inherit;
     color: inherit;
-    /* transition: 0.3s; */
 }
 
 .nav-links ul li a:hover {
     color: #006400;
-    /* transition: 0.3s; */
 }
 
 h1 {
@@ -122,7 +113,6 @@ h1 {
 }
 
 #header-img {
-    /* height: 100%; */
     height: 50px;
     width: 50px;
     margin: 0 5px 0 0;
@@ -130,28 +120,21 @@ h1 {
 
 .brand-name {
     flex-grow: 1;
-    /* display: flex;
-    align-items: center; */
 }
 
 .burger-wrapper {
     text-align: right;
     margin: 0 0 0 5px;
-    /* background-color: peru; */
 }
 
 #burger-btn {
     font-size: 48px;
     font-weight: bold;
-    /* color: #38a37f;
-    font-size: 32px;
-    text-decoration: none;
-    width: 100%; */
 }
 
 #burger-btn:hover {
-    color: blue;
-}
+    color: #006400;
+        }
 
 /* Sign-up buttons in navbar */
 
@@ -226,21 +209,11 @@ h2 {
 
 .video-wrapper {
     text-align: center;
-    /* width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    position: relative; */
 }
 
 #video {
-    /* TODO: Video overflows from video-wrapper */
     max-width: 100%;
 }
-/* 
-.primary p, .primary iframe {
-    margin: 10px 0;
-    position: absolute;
-} */
 
 .primary button {
     margin: 20px 0;
@@ -256,13 +229,10 @@ h2 {
     font-weight: inherit;
     font-size: 20px;
     border-radius: 10px;
-    /* transition: 0.3s; */
-    /* text-transform: uppercase; */
 }
 
 .action-btn:hover {
     background-color: #006400;
-    /* transition: 0.3s; */
 }
 
 .action-btn-lg {
@@ -271,28 +241,33 @@ h2 {
 }
 
 
-
 /* Styling for modal */
+
 #signup-modal-container {
-    /* visibility: hidden; */
     position: fixed;
     top: 0;
     left: 0;
-    /* height: 100vh;
-    width: 100vw; */
     height: 100%;
     width: 100%;
     background-color: #f7f7f7;
+    overflow: auto;
 }
 
-#signup-modal-container .primary {
+#signup-modal-container .centered {
     padding-bottom: 0;
     margin-bottom: 0;
+    margin: 0 auto;
+    max-width: 520px;
 }
 
-#signup-modal-container .secondary {
-    padding-top: 0;
-    margin-top: 0;
+/* .modal-header {
+    display: flex;
+    align-items: center;
+} */
+
+.modal-header .col {
+    margin: 10px 1rem;
+    color: #6c757d;
 }
 
 .form-row {
@@ -313,21 +288,47 @@ h2 {
     text-align: left;
 }
 
+.align-center {
+    text-align: center;
+}
+
 .submit {
     margin-top: 15px;
     max-width: 130px;
 }
 
+
 .close {
     background-color: #f7f7f7;
     color: #6c757d;
     font-size: 48px;
+    padding: 0px;
+
 }
 
 .close:hover {
     color: #292b2c;
     background-color: #f7f7f7;
     /* transition: 0.3s; */
+}
+
+@media only screen and (min-width : 520px) {
+    .modal-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .modal-header .col {
+        margin: 10px 1rem;
+        color: #6c757d;
+    }
+
+    .modal-header {
+        display: flex;
+        align-items: center;
+    }
+
+
 }
 
 /* Desktop version */
@@ -429,6 +430,30 @@ h2 {
         .secondary col {
             max-width: 50%;
             flex-basis: 50%;
+        }
+
+        /* Styling for modal */
+        #signup-modal-container {
+            background-color: rgb(0, 0, 0, 0.5);
+        }
+
+        #signup-modal {
+            background-color: #f7f7f7;
+            min-width: 50%;
+            max-width: 620px;
+            padding-bottom: 50px;
+            margin: 10% auto;
+            border-radius: 10px;
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .modal-header .col {
+            margin: 10px;
+            color: #6c757d;
         }
     
     

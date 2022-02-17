@@ -260,11 +260,6 @@ h2 {
     max-width: 520px;
 }
 
-/* .modal-header {
-    display: flex;
-    align-items: center;
-} */
-
 .modal-header .col {
     margin: 10px 1rem;
     color: #6c757d;
@@ -309,7 +304,6 @@ h2 {
 .close:hover {
     color: #292b2c;
     background-color: #f7f7f7;
-    /* transition: 0.3s; */
 }
 
 @media only screen and (min-width : 520px) {
@@ -371,14 +365,12 @@ h2 {
         }
     
         #nav-menu {
-            /* visibility: visible; */
             height: 100%;
             display: flex;
         }
         
         .nav-links {
             flex-direction: row;
-            /* visibility: visible; */
             height: 100%;
             flex-basis: auto;
             align-items: center;
@@ -404,18 +396,11 @@ h2 {
     
     /* Styling for main */
     
-    /* #main {
-        display: flex;
-        padding: 150px;
-        align-items: center;
-    } */
-    
         #main {
             padding: 100px;
         }
     
         #main .col {
-            /* flex-basis: 50%; */
             max-width: 50%;
             margin: 0 auto;
             max-width: 570px;
@@ -455,9 +440,6 @@ h2 {
             margin: 10px;
             color: #6c757d;
         }
-    
-    
-    
     }
     
     
